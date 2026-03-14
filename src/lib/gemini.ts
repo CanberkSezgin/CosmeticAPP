@@ -13,8 +13,8 @@ export async function analyzeImagesInternal(
     throw new Error('GEMINI_API_KEY is not set in environment variables.');
   }
 
-  // The Gemini 1.5 Pro model is versatile and works with multi-modality (images + text)
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+  // The Gemini 1.5 Pro (latest) model is versatile and works with multi-modality (images + text)
+  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro-latest' });
 
   // Convert base64 strings to Gemini's expected format
   const facePart = {
