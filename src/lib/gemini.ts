@@ -13,8 +13,8 @@ export async function analyzeImagesInternal(
     throw new Error('GEMINI_API_KEY is not set in environment variables.');
   }
 
-  // Using the widely available, fast, and multimodal gemini-1.5-flash model
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  // Using the widely available, fast, and multimodal gemini-2.5-flash model
+  const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
   // Convert base64 strings to Gemini's expected format
   const facePart = {
