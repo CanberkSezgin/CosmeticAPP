@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ CosmeticAPP - AI Beauty & Styling Advisor
+CosmeticAPP is a high-end, AI-powered beauty consultant that analyzes your unique features to provide personalized styling, color analysis, and a real-time virtual try-on experience.
 
-## Getting Started
+Built with Next.js, Google Gemini AI, and MediaPipe, it bridge the gap between AI analysis and augmented reality.
 
-First, run the development server:
+ Key Features
+ 1. Deep AI Color & Style Analysis
+Powered by Google Gemini 1.5/2.5 Flash, the app performs a professional-grade analysis of:
 
-```bash
+Skin Undertone: Detected via wrist vein analysis (Cool, Warm, Neutral).
+12-Season Color Palette: Identifies your specific season (e.g., Cool Summer, Deep Autumn) with signature colors and colors to avoid.
+Face Shape Analysis: Detects facial ratios to recommend the best haircuts and glasses frames.
+ 2. Advanced AR Virtual Try-On
+No more static overlays. We use Google MediaPipe (FaceLandmarker & ImageSegmenter) for a true AR experience:
+
+Pixel-Perfect Hair Recolor: Uses AI segmentation masks to recolor only your hair piksels while preserving natural shine and texture.
+Milimetric Glasses Placement: Calculates eye distance and head tilt to map real 3D-like glasses PNGs onto your face perfectly.
+Dynamic Perspective: The overlays adjust in real-time based on your photo's orientation.
+ 3. Multi-Language Support
+Full support for Turkish (TR) and English (EN), from the interface to the AI-generated reports.
+
+ Tech Stack
+Frontend: Next.js 15 (App Router), React
+Styling: Tailwind CSS, Framer Motion (Premium Animations)
+AI Engine: Google Generative AI (Gemini API)
+Computer Vision: MediaPipe Tasks Vision
+Icons: Lucide React
+ Installation & Setup
+Clone the repository:
+
+bash
+git clone https://github.com/CanberkSezgin/CosmeticAPP.git
+cd CosmeticAPP
+Install dependencies:
+
+bash
+npm install
+Environment Variables: Create a .env.local file in the root directory and add your Gemini API Key:
+
+env
+GEMINI_API_KEY=your_api_key_here
+Run the development server:
+
+bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open the app: Navigate to http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ How It Works
+Upload Photos: Provide a clear photo of your wrist veins and a front-facing selfie.
+AI Processing: Our custom-tuned prompts send these to Gemini for a multi-layered aesthetic analysis.
+Get Results: View your 12-season palette and personalized styling guides.
+Try-On: Click "Dene" (Try-On) to see how recommended hair colors and glasses look on you using our Computer Vision engine.
+ Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ License
+This project is for educational and portfolio purposes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Created with  by Canberk Sezgin
