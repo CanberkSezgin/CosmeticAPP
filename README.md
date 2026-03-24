@@ -56,4 +56,4 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
  License
 This project is for educational and portfolio purposes.
 
-Created with  by Canberk Sezgin
+Created by Canberk Sezgin
